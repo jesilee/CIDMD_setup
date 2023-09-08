@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 ##################################
 #
-#   Jesi Lee
+#   Jesi Lee and Lee-Ping Wang
 #   CIDMD pilot study #4 
 #   Jan. 2022
 #
