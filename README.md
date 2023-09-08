@@ -144,15 +144,17 @@ threspdp        1e-4
 dftgrid         3
 ```
 
-8) run `link_run_in.sh` file in `cid/` folder.
+8) run this command line in `cid/` folder:
+   `find calcs -name start.xyz -execdir ln -fs ../../../run.in . \;`
+   or run `link_run_in.sh` file from the repository.
    
-9) execute TeraChem to run CIDMD.
+10) execute TeraChem to run CIDMD.
    example: `terachem run.in &> run.out` 
 
-10) process CIDMD trajectories using `LearnReactions.py` written by Prof. Lee-Ping Wang.
+11) process CIDMD trajectories using `LearnReactions.py` written by Prof. Lee-Ping Wang.
     His repository: `https://github.com/leeping/nanoreactor` (not yet released)
     
-11) analyze CIDMD trajectories using these repositories:
+12) analyze CIDMD trajectories using these repositories:
   `git clone https://github.com/jesilee/CIDMD_analysis`
   `git clone https://github.com/jesilee/CIDMD_compare`  
 
