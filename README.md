@@ -63,8 +63,8 @@ optional arguments:
 
 ```  
 ## Outputs
-* a user-defined number of CIDMD input files, `start.xyz` and `vel.xyz`, varing collisional geometry
-* a user-defined number of collision trajectories that can be studied for fragmentation reaction pathways
+* a user-defined number of CIDMD input files, `start.xyz` and `vel.xyz`, varing collisional geometry.
+* a user-defined number of collision trajectories that can be studied for fragmentation reaction pathways.
 * further analyses can be done using this repositories:
   `github.com/jesilee/CIDMD_analysis` performs analysis of CIDMD results, and
   `github.com/jesilee/CIDMD_compare` compares the quality of CIDMD prediction against the reference mass spectra provided.
@@ -84,13 +84,13 @@ optional arguments:
 To start CIDMD, Folder organization is very important. Here is the instruction to set up CIDMD with this repository:
 
 1) start by creating a folder `Molecule` where molecule is the name of user-defined molecule.
-   example: Psilcin
+   example: Psilocin
    
 2) create a text file name `mol_info.in` that contains information about the molecule.
    example:
 ```
 ###__ mol_info __###
-mol_name = Psiocin
+mol_name = Psilocin
 mol_id   = PS
 mol_mf   = C12H16N2O
 mol_mw   = 204
@@ -107,11 +107,52 @@ mol_xw   = 204.268
    
 6) execute `bash CIDMD_setup.com`.
    
-7) run these trajectories with TeraChem
+7) run these trajectories with TeraChem by adding `run.in` file under `cid/` folder.
+   example:
+```
+coordinates start.xyz
+charge      1
+spinmult    1
+run         md
+method      ub3lyp
+basis       6-31gs
+
+# Output options
+bond_order_list   yes
+bond_order_thresh 0.1
+
+# MD options #nve
+timestep        1.0
+velocities      vel.xyz
+nstep           1000
+scfintegrator   regular
+removecomm      no
+
+# SCF options
+maxit           100
+convthre        1e-4
+# guess           ca0 cb0
+purify          no
+mixguess        0.0
+
+# Technical options
+# timings         yes
+# gpus            2
+# xtol            1e-8
+precision       mixed
+threspdp        1e-4
+dftgrid         3
+```
+
+8) run `link_run_in.sh` file in `cid/` folder.
    
-8) process CIDMD trajectories using `LearnReactions.py`
+9) execute TeraChem to run CIDMD.
+   example: `terachem run.in &> run.out` 
+
+10) process CIDMD trajectories using `LearnReactions.py` written by Prof. Lee-Ping Wang.
+    His repository: `https://github.com/leeping/nanoreactor` (not yet released)
     
-9) analyze CIDMD trajectories using these repositories:
+11) analyze CIDMD trajectories using these repositories:
   `git clone https://github.com/jesilee/CIDMD_analysis`
   `git clone https://github.com/jesilee/CIDMD_compare`  
 
