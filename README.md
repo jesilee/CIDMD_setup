@@ -73,7 +73,7 @@ optional arguments:
 * python 3.6
 * numpy 
 
-* these files should be in the current working directory & get it from this repository `git clone https://github.com/jesilee/CIDMD_setup`
+* these files from this repo should be in the current working directory: 
  `CIDMD_setup.com`
  `CIDMD_setup.py`
  `CIDMD_preprun.py`
@@ -83,10 +83,10 @@ optional arguments:
 ## Important notes
 To start CIDMD, Folder organization is very important. Here is the instruction to set up CIDMD with this repository:
 
-1) start by creating a folder `Molecule` where molecule is the name of user-defined molecule
+1) start by creating a folder `Molecule` where molecule is the name of user-defined molecule.
    example: Psilcin
    
-2) create a text file name `mol_info.in` that contains information about the molecule
+2) create a text file name `mol_info.in` that contains information about the molecule.
    example:
 ```
 ###__ mol_info __###
@@ -98,7 +98,7 @@ mol_xw   = 204.268
 ```
 
 3) git clone this current repository:
-  examlpe: `git clone https://github.com/jesilee/CIDMD_setup`
+  `git clone https://github.com/jesilee/CIDMD_setup`
 
 4) check these files are in the current working directory: 
   `CIDMD_setup.com`, `CIDMD_setup.py`, `CIDMD_preprun.py`, and `lebedev.py`
