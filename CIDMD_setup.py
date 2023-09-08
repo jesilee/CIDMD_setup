@@ -9,7 +9,6 @@
 import numpy as np
 import sys
 import random
-#import matplotlib.pyplot as plt
 from itertools import product, combinations, repeat
 from typing import Tuple
 from lebedev import *
@@ -50,7 +49,6 @@ def create_random_dvec(rng) -> np.ndarray:
     """
     while True:
         random_vec = 2*(rng.random(3) - 0.5)
-        #random_vec[2] = np.sqrt(.5 - (random_vec[0])**2 - (random_vec[1])**2)
         mag = np.linalg.norm(random_vec)
         if mag <= 1.0:
             random_vec_norm = random_vec/mag
