@@ -152,7 +152,7 @@ dftgrid         3
    example: `terachem run.in &> run.out` 
 
 11) process CIDMD trajectories using `LearnReactions.py` written by Prof. Lee-Ping Wang.
-    His repository: `https://github.com/leeping/nanoreactor` (not yet released)
+    His repository: 'https://github.com/leeping/nanoreactor' (not yet released)
     
 12) analyze CIDMD trajectories using these repositories:
   `git clone https://github.com/jesilee/CIDMD_analysis`
