@@ -1,5 +1,5 @@
 ############################################################################
-# Jesi Lee                                                                 
+# Jesi Lee  and Lee-Ping Wang                                                               
 # Jan 2022		                                                   
 #   
 # Please set/change the variable options				   
