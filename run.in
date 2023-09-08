@@ -1,0 +1,28 @@
+coordinates start.xyz
+charge      1
+spinmult    1
+run         md
+method      ub3lyp
+basis       6-31gs
+
+# Output options
+bond_order_list   yes
+bond_order_thresh 0.1
+
+# MD options #nve
+timestep        1.0
+velocities      vel.xyz
+nstep           1000
+scfintegrator   regular
+removecomm      no
+
+# SCF options
+maxit           100
+convthre        1e-4
+purify          no
+mixguess        0.0
+
+# Technical options
+precision       mixed
+threspdp        1e-4
+dftgrid         3
