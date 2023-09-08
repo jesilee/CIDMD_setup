@@ -109,7 +109,7 @@ mol_xw   = 204.268
    
 7) run these trajectories with TeraChem
    
-8) process CIDMD trajectories using LearnReactions.py
+8) process CIDMD trajectories using `LearnReactions.py`
     
 9) analyze CIDMD trajectories using these repositories:
   `git clone https://github.com/jesilee/CIDMD_analysis`
